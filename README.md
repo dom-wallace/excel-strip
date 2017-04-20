@@ -17,3 +17,4 @@ There are heaps:
 2. Zero validation on whether what is extracted is a PDF, it just blindly renames it.
 3. Only gets the first embedded attachment, so if there is more than one or the file that is selcted is the wrong one, too bad.
 4. Only supports Excel. This could be ported easily to do Word, PowerPoint, etc with a few minor changes, such as the file extension and the embeddings directory.
+5. All the destination PDFs are called 'invoice' as this was originally used to extract scanned invoices from finance spreadsheets and I haven't changed it yet.
