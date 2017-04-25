@@ -42,8 +42,8 @@ trap cleanup EXIT
 for f in  $FILES/**/*.xlsx ; do
 	unzip -q -d "$WORKDIR/$COUNT" "$f" 
 	if [[ -f "$WORKDIR/$COUNT/xl/embeddings/oleObject1.bin" ]]; then
-		echo "moving $WORKDIR/$COUNT/xl/embeddings/oleObject1.bin to $TARGET/invoice_$COUNT.pdf"
-		mv "$WORKDIR/$COUNT/xl/embeddings/oleObject1.bin" "$TARGET/invoice_$COUNT.pdf" || { echo "could not move file to $TARGET"; exit 1; }
+		echo "cleaning and moving $WORKDIR/$COUNT/xl/embeddings/oleObject1.bin to $TARGET/invoice_$COUNT.pdf"
+		mutool clean "$WORKDIR/$COUNT/xl/embeddings/oleObject1.bin" "$TARGET/invoice_$COUNT.pdf"
 	else
 		echo "no PDF found in $f. Skipping"
 	fi	
