@@ -5,6 +5,7 @@ A very simple tool for stripping out what is assumed to be an embedded PDF insid
 * A relatively recent version of Zsh (Z Shell).
 * Enough disk space for all the extracted files during processing.
 * A Unix like environment (Linux, macOS, Cygwin, etc) with the usual tools like `unzip` and `mktemp`.
+* mutool, part of the mutool-pdf package
 
 ## Usage
 `./extract.sh SOURCE_DIRECTORY TARGET_DIRECTORY`
